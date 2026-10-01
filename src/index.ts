@@ -1,14 +1,13 @@
-import path from 'path'
+import path from 'node:path'
 
-import type { Configuration, ResolveOptions } from 'webpack'
+import webpack, { type Configuration, type ResolveOptions } from 'webpack'
 
 // Stock.
-export {
-  default,
-  EnvironmentPlugin,
-  type Configuration,
-  type PathData,
-} from 'webpack'
+export { default } from 'webpack'
+export type { Configuration, PathData } from 'webpack'
+
+// Node can't detect `EnvironmentPlugin` as a named export of CommonJS Webpack.
+export const { EnvironmentPlugin } = webpack
 
 // Theirs.
 export { CleanWebpackPlugin as CleanPlugin } from 'clean-webpack-plugin'
@@ -24,7 +23,8 @@ export const resolve: Configuration['resolve'] = {
   extensions: ['.tsx', '.ts', '.js'],
 }
 
-// Resolve Webpack loaders from this package first.
+// Resolve Webpack loaders from the `node_modules` this package is installed
+// in, which is three levels up from `dist/`.
 export const resolveLoader: ResolveOptions = {
-  modules: [path.join(__dirname, '..', 'node_modules'), 'node_modules'],
+  modules: [path.join(import.meta.dirname, '..', '..', '..'), 'node_modules'],
 }

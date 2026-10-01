@@ -1,0 +1,23 @@
+/** @type {import('beachball').BeachballConfig} */
+module.exports = {
+  branch: 'origin/main',
+  gitTags: false,
+  ignorePatterns: [
+    '*.test.*',
+    '.*/**',
+    '__snapshots__/',
+    'dist/',
+    'node_modules/',
+    '.projenrc.mts',
+    'AGENTS.md',
+    'CODEOWNERS',
+    'beachball.config.js',
+    'eslint.config.mjs',
+    'lint-staged.config.mjs',
+    'pnpm-lock.yaml',
+    'pnpm-workspace.yaml',
+    'prettier.config.mjs',
+    'renovate.json5',
+    'tsconfig.json',
+  ],
+}

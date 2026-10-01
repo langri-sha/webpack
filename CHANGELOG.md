@@ -1,8 +1,16 @@
 # Change Log - @langri-sha/webpack
 
-<!-- This log was last generated on Thu, 01 Oct 2026 15:51:54 GMT and should not be manually modified. -->
+<!-- This log was last generated on Thu, 01 Oct 2026 18:02:04 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 0.7.0
+
+Thu, 01 Oct 2026 18:02:04 GMT
+
+### Minor changes
+
+- Declare the package as an ES module (filip.dupanovic@gmail.com)
 
 ## 0.6.6
 

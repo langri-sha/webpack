@@ -2,6 +2,21 @@
   "name": "@langri-sha/webpack",
   "entries": [
     {
+      "date": "Thu, 01 Oct 2026 18:02:04 GMT",
+      "version": "0.7.0",
+      "tag": "@langri-sha/webpack_v0.7.0",
+      "comments": {
+        "minor": [
+          {
+            "author": "filip.dupanovic@gmail.com",
+            "package": "@langri-sha/webpack",
+            "commit": "aea9f05c077d6dcd94d717d7042d6b54cd1dd9df",
+            "comment": "Declare the package as an ES module"
+          }
+        ]
+      }
+    },
+    {
       "date": "Thu, 01 Oct 2026 15:51:54 GMT",
       "version": "0.6.6",
       "tag": "@langri-sha/webpack_v0.6.6",

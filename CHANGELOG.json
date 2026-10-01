@@ -2,6 +2,21 @@
   "name": "@langri-sha/webpack",
   "entries": [
     {
+      "date": "Thu, 01 Oct 2026 15:51:54 GMT",
+      "version": "0.6.6",
+      "tag": "@langri-sha/webpack_v0.6.6",
+      "comments": {
+        "patch": [
+          {
+            "author": "filip.dupanovic@gmail.com",
+            "package": "@langri-sha/webpack",
+            "commit": "f72b1d30c0e9f56a83c42a52a9cf14fef9fbeba9",
+            "comment": "Publish from langri-sha/webpack, which now owns this package and its history"
+          }
+        ]
+      }
+    },
+    {
       "date": "Wed, 30 Sep 2026 11:26:36 GMT",
       "version": "0.6.5",
       "tag": "@langri-sha/webpack_v0.6.5",

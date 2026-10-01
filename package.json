@@ -1,6 +1,6 @@
 {
   "name": "@langri-sha/webpack",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "description": "Webpack and its plugins aggregated for monorepo builds",
   "keywords": [
     "babel",

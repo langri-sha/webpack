@@ -25,10 +25,12 @@ pnpm projen                             # re-synthesize from .projenrc.ts
 pnpm tsc --build .                      # typecheck
 pnpm eslint . && pnpm prettier --check .
 pnpm run prepublishOnly                 # build dist/
+pnpm smoke                              # pack, install and build with the tarball
 pnpm change                             # write a change file
 ```
 
-The package has no tests.
+The package has no unit tests; `pnpm smoke` is the end-to-end check on the
+packed tarball.
 
 ## Release
 
@@ -68,13 +70,22 @@ installs it as the unmet peer it is.
 the projenrc is `.projenrc.ts`, the ESLint, Prettier and lint-staged configs are
 `.js`, and `beachball.config.cjs` is the one CommonJS file.
 
-`dist/` still doesn't load under native ESM: it imports `EnvironmentPlugin` by
-name from CommonJS `webpack`, `webpack-subresource-integrity`'s ESM build
-imports its own modules without file extensions, and `resolveLoader` reads
-`__dirname`. Releases have had that shape since before the move out of
-`langri-sha/projen`. Its only former consumer, `langri-sha.com`'s `apps/web`,
-imported the TypeScript source through `workspace:*`, never exercised `dist/`,
-and retired the package on 2026-08-15.
+`dist/` is built by `tsc` with `module` and `moduleResolution` set to `nodenext`
+in `tsconfig.build.json`, so it loads under native ESM, `require()` and
+webpack-cli. No interop shims: `EnvironmentPlugin` comes from webpack's default
+export, since Node can't detect it as a named export of CommonJS `webpack`, and
+`resolveLoader` uses `import.meta.dirname`, climbing `'..', '..', '..'` from
+`dist/` to the `node_modules` the package is installed in, which is where pnpm
+puts its `babel-loader`.
+
+`webpack-subresource-integrity` is pinned to 5.1.0. The ESM build of 5.2.0-rc.1
+imports its own modules without file extensions
+([waysact/webpack-subresource-integrity#236](https://github.com/waysact/webpack-subresource-integrity/issues/236)),
+so don't let Renovate move it until that is fixed.
+
+`pnpm smoke` guards all of this: it packs the tarball, installs it into a
+temporary pnpm project, imports it in plain Node and builds with `babel-loader`.
+The Workspace workflow runs it as the `smoke` job.
 
 ## Provenance
 

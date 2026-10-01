@@ -28,7 +28,7 @@
     "change": "pnpm exec projen change",
     "default": "pnpm exec projen default",
     "prepare": "husky",
-    "prepublishOnly": "rm -rf dist; tsc --project tsconfig.build.json",
+    "prepublishOnly": "rm -rf dist; tsc --noEmit false --rootDir src",
     "renovate": "pnpm exec projen renovate",
     "smoke": "node scripts/smoke.js"
   },

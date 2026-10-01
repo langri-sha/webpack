@@ -36,8 +36,8 @@ packed tarball.
 
 Beachball versions the package and the Release workflow publishes it through npm
 trusted publishing. Anything that reaches the tarball or builds it — `src/`,
-`readme.md`, `package.json`, `tsconfig.build.json` — needs a change file in the
-same pull request. Root tooling does not: `beachball.config.cjs` lists what is
+`readme.md`, `package.json`, `tsconfig.json` — needs a change file in the same
+pull request. Root tooling does not: `beachball.config.cjs` lists what is
 exempt, so lock file maintenance never cuts a release.
 
 The Release workflow calls the shared Packages workflow with
@@ -71,12 +71,13 @@ the projenrc is `.projenrc.ts`, the ESLint, Prettier and lint-staged configs are
 `.js`, and `beachball.config.cjs` is the one CommonJS file.
 
 `dist/` is built by `tsc` with `module` and `moduleResolution` set to `nodenext`
-in `tsconfig.build.json`, so it loads under native ESM, `require()` and
-webpack-cli. No interop shims: `EnvironmentPlugin` comes from webpack's default
-export, since Node can't detect it as a named export of CommonJS `webpack`, and
-`resolveLoader` uses `import.meta.dirname`, climbing `'..', '..', '..'` from
-`dist/` to the `node_modules` the package is installed in, which is where pnpm
-puts its `babel-loader`.
+in `tsconfig.json`, which `prepublishOnly` runs with `--noEmit false`, so it
+loads under native ESM, `require()` and webpack-cli. No interop shims:
+`EnvironmentPlugin` comes from webpack's default export, since Node can't detect
+it as a named export of CommonJS `webpack`, and `resolveLoader` uses
+`import.meta.dirname`, climbing `'..', '..', '..'` from `dist/` to the
+`node_modules` the package is installed in, which is where pnpm puts its
+`babel-loader`.
 
 `webpack-subresource-integrity` is pinned to 5.1.0. The ESM build of 5.2.0-rc.1
 imports its own modules without file extensions

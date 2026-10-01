@@ -34,5 +34,4 @@ node_modules/
 !/.npmignore
 !/pnpm-workspace.yaml
 !/renovate.json5
-!/tsconfig.build.json
 !/.projenrc.ts

@@ -1,4 +1,4 @@
-import { Project, TypeScriptConfig } from '@langri-sha/projen-project'
+import { Project } from '@langri-sha/projen-project'
 
 const project = new Project({
   name: '@langri-sha/webpack',
@@ -59,7 +59,6 @@ const project = new Project({
         'prettier.config.js',
         'renovate.json5',
         'scripts/**',
-        'tsconfig.json',
       ],
     },
   },
@@ -114,10 +113,14 @@ const project = new Project({
   },
   typeScriptConfig: {
     config: {
+      extends: '@langri-sha/tsconfig/build',
       compilerOptions: {
+        module: 'nodenext',
+        moduleResolution: 'nodenext',
         noEmit: true,
       },
       include: ['src'],
+      exclude: ['**/*.test.*'],
     },
   },
 })
@@ -142,21 +145,12 @@ project.package?.addField('devEngines', {
 
 project.package?.setScript(
   'prepublishOnly',
-  'rm -rf dist; tsc --project tsconfig.build.json',
+  'rm -rf dist; tsc --noEmit false --rootDir src',
 )
 project.package?.setScript('smoke', 'node scripts/smoke.js')
 
-new TypeScriptConfig(project, {
-  fileName: 'tsconfig.build.json',
-  config: {
-    extends: '@langri-sha/tsconfig/build',
-    compilerOptions: {
-      module: 'nodenext',
-      moduleResolution: 'nodenext',
-    },
-    include: ['src'],
-    exclude: ['**/*.test.*'],
-  },
-})
+// The tsconfig lists the root config files so they get typechecked, which
+// `rootDir` can't take, so the emit would otherwise nest `dist/` under `src/`.
+project.tryFindObjectFile('tsconfig.json')?.addDeletionOverride('files')
 
 project.synth()

@@ -19,6 +19,5 @@ module.exports = {
     'prettier.config.js',
     'renovate.json5',
     'scripts/**',
-    'tsconfig.json',
   ],
 }

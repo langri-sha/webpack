@@ -29,7 +29,8 @@
     "default": "pnpm exec projen default",
     "prepare": "husky",
     "prepublishOnly": "rm -rf dist; tsc --project tsconfig.build.json",
-    "renovate": "pnpm exec projen renovate"
+    "renovate": "pnpm exec projen renovate",
+    "smoke": "node scripts/smoke.js"
   },
   "dependencies": {
     "babel-loader": "10.1.1",

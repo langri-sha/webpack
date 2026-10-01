@@ -58,6 +58,7 @@ const project = new Project({
         'pnpm-workspace.yaml',
         'prettier.config.js',
         'renovate.json5',
+        'scripts/**',
         'tsconfig.json',
       ],
     },
@@ -80,6 +81,7 @@ const project = new Project({
       '/AGENTS.md',
       '/CODEOWNERS',
       '/change/',
+      '/scripts/',
     ],
   },
   pnpmWorkspace: {
@@ -142,6 +144,7 @@ project.package?.setScript(
   'prepublishOnly',
   'rm -rf dist; tsc --project tsconfig.build.json',
 )
+project.package?.setScript('smoke', 'node scripts/smoke.js')
 
 new TypeScriptConfig(project, {
   fileName: 'tsconfig.build.json',

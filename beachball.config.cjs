@@ -18,6 +18,7 @@ module.exports = {
     'pnpm-workspace.yaml',
     'prettier.config.js',
     'renovate.json5',
+    'scripts/**',
     'tsconfig.json',
   ],
 }

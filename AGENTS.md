@@ -7,13 +7,13 @@ the repository root.
 
 ## Who owns which file
 
-| Owner                                    | Files                                                                                                                                                                                                                          |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Projen (`.projenrc.mts` → `pnpm projen`) | `package.json`, `.projen/`, `tsconfig*.json`, `pnpm-workspace.yaml`, `renovate.json5`, `beachball.config.js`, the ESLint, Prettier and lint-staged configs, `.husky/`, the ignore and attribute files, `CODEOWNERS`, `license` |
-| Beachball                                | `CHANGELOG.md`, `CHANGELOG.json` and the `version` field                                                                                                                                                                       |
-| You                                      | `src/**`, `readme.md`, `.github/workflows/`, this file                                                                                                                                                                         |
+| Owner                                   | Files                                                                                                                                                                                                                           |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Projen (`.projenrc.ts` → `pnpm projen`) | `package.json`, `.projen/`, `tsconfig*.json`, `pnpm-workspace.yaml`, `renovate.json5`, `beachball.config.cjs`, the ESLint, Prettier and lint-staged configs, `.husky/`, the ignore and attribute files, `CODEOWNERS`, `license` |
+| Beachball                               | `CHANGELOG.md`, `CHANGELOG.json` and the `version` field                                                                                                                                                                        |
+| You                                     | `src/**`, `readme.md`, `.github/workflows/`, this file                                                                                                                                                                          |
 
-Synthesized files are read-only; change them in `.projenrc.mts`. Repository
+Synthesized files are read-only; change them in `.projenrc.ts`. Repository
 settings, branch protection and the Actions secrets are managed by
 `langri-sha/github-repos`.
 
@@ -21,7 +21,7 @@ settings, branch protection and the Actions secrets are managed by
 
 ```sh
 pnpm install
-pnpm projen                             # re-synthesize from .projenrc.mts
+pnpm projen                             # re-synthesize from .projenrc.ts
 pnpm tsc --build .                      # typecheck
 pnpm eslint . && pnpm prettier --check .
 pnpm run prepublishOnly                 # build dist/
@@ -35,7 +35,7 @@ The package has no tests.
 Beachball versions the package and the Release workflow publishes it through npm
 trusted publishing. Anything that reaches the tarball or builds it — `src/`,
 `readme.md`, `package.json`, `tsconfig.build.json` — needs a change file in the
-same pull request. Root tooling does not: `beachball.config.js` lists what is
+same pull request. Root tooling does not: `beachball.config.cjs` lists what is
 exempt, so lock file maintenance never cuts a release.
 
 The Release workflow calls the shared Packages workflow with
@@ -64,17 +64,17 @@ installs it as the unmet peer it is.
 
 ## Module format
 
-`package.json` declares no `"type"`, so the preset names the projenrc
-`.projenrc.mts` and the ESLint, Prettier and lint-staged configs `.mjs`, and
-`beachball.config.js` is CommonJS.
+`package.json` declares `"type": "module"`, as the rest of the fleet does, so
+the projenrc is `.projenrc.ts`, the ESLint, Prettier and lint-staged configs are
+`.js`, and `beachball.config.cjs` is the one CommonJS file.
 
-`dist/` is ESM all the same, so Node only loads the published entrypoint after
-detecting its syntax, with a warning, and `__dirname` in `resolveLoader` is then
-undefined. Every release since 0.5.0, the first built to `dist/`, has that
-shape; it predates the move out of `langri-sha/projen` and is kept as published.
-Its only former consumer, `langri-sha.com`'s `apps/web`, imported the TypeScript
-source through `workspace:*`, never exercised `dist/`, and retired the package
-on 2026-08-15.
+`dist/` still doesn't load under native ESM: it imports `EnvironmentPlugin` by
+name from CommonJS `webpack`, `webpack-subresource-integrity`'s ESM build
+imports its own modules without file extensions, and `resolveLoader` reads
+`__dirname`. Releases have had that shape since before the move out of
+`langri-sha/projen`. Its only former consumer, `langri-sha.com`'s `apps/web`,
+imported the TypeScript source through `workspace:*`, never exercised `dist/`,
+and retired the package on 2026-08-15.
 
 ## Provenance
 

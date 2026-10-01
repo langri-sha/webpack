@@ -19,6 +19,7 @@ const project = new Project({
       pinnedDevDependency: false,
     },
     repository: 'git+https://github.com/langri-sha/webpack.git',
+    type: 'module',
 
     deps: [
       'babel-loader@10.1.1',
@@ -47,15 +48,15 @@ const project = new Project({
       // The package is the repository root, so these would otherwise demand a
       // release for changes that never reach the tarball.
       ignorePatterns: [
-        '.projenrc.mts',
+        '.projenrc.ts',
         'AGENTS.md',
         'CODEOWNERS',
-        'beachball.config.js',
-        'eslint.config.mjs',
-        'lint-staged.config.mjs',
+        'beachball.config.cjs',
+        'eslint.config.js',
+        'lint-staged.config.js',
         'pnpm-lock.yaml',
         'pnpm-workspace.yaml',
-        'prettier.config.mjs',
+        'prettier.config.js',
         'renovate.json5',
         'tsconfig.json',
       ],

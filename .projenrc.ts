@@ -29,7 +29,7 @@ const project = new Project({
       'terser-webpack-plugin@5.6.1',
       'webpack-bundle-analyzer@5.4.0',
       'webpack-dev-server@6.0.0',
-      'webpack-subresource-integrity@5.2.0-rc.1',
+      'webpack-subresource-integrity@5.1.0',
     ],
     devDeps: [
       '@langri-sha/babel-preset@0.6.8',
@@ -147,6 +147,10 @@ new TypeScriptConfig(project, {
   fileName: 'tsconfig.build.json',
   config: {
     extends: '@langri-sha/tsconfig/build',
+    compilerOptions: {
+      module: 'nodenext',
+      moduleResolution: 'nodenext',
+    },
     include: ['src'],
     exclude: ['**/*.test.*'],
   },

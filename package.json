@@ -39,7 +39,7 @@
     "terser-webpack-plugin": "5.6.1",
     "webpack-bundle-analyzer": "5.4.0",
     "webpack-dev-server": "6.0.0",
-    "webpack-subresource-integrity": "5.2.0-rc.1"
+    "webpack-subresource-integrity": "5.1.0"
   },
   "devDependencies": {
     "@langri-sha/babel-preset": "0.6.8",

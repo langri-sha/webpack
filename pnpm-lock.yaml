@@ -191,8 +191,8 @@ importers:
         specifier: 6.0.0
         version: 6.0.0(supports-color@8.1.1)(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0))
       webpack-subresource-integrity:
-        specifier: 5.2.0-rc.1
-        version: 5.2.0-rc.1(html-webpack-plugin@5.6.8(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0)))(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0))
+        specifier: 5.1.0
+        version: 5.1.0(html-webpack-plugin@5.6.8(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0)))(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0))
     devDependencies:
       '@langri-sha/babel-preset':
         specifier: 0.6.8
@@ -4160,6 +4160,9 @@ packages:
     resolution: {integrity: sha512-phPGCwqr2+Qo0fwniCE8e4pKnGu/yFb5nD5Y8bf0EEeiI5GklnACYA9GFy/DrAeRrKHXvHn+1SUsOWgJp6RO+g==}
     engines: {node: '>= 0.4'}
 
+  typed-assert@1.0.9:
+    resolution: {integrity: sha512-KNNZtayBCtmnNmbo5mG47p1XsCyrx6iVqomjcZnec/1Y5GGARaxPs6r49RnSPeUP3YjNYiU9sQHAtY4BBvnZwg==}
+
   typescript-eslint@8.70.1:
     resolution: {integrity: sha512-AcWG7KDjZ2THNXsgwttMaGmzVi0VFRlFYfqFHYQRbDpF3owuYbuiL8c7UUrd2k8s3PoSfIQrWfrGXfcElrWLYA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -4272,8 +4275,8 @@ packages:
     resolution: {integrity: sha512-EIMmPVvNI0CYXyRPp34F2Qk7W37/BZVZIofS6LAUnrNjCVahS+hO4mxwFJDjQjODTGZDtVzLYoN2+1dYkhk9qA==}
     engines: {node: '>=10.13.0'}
 
-  webpack-subresource-integrity@5.2.0-rc.1:
-    resolution: {integrity: sha512-SyjlQ3VZVwpNeVPIMpYf9Qt6oTnq9G3lCcr5YNwjW9TfUoip70MlB9ZDNhJPhkHvfvajMDQwZFfDVVL1QVwnLQ==}
+  webpack-subresource-integrity@5.1.0:
+    resolution: {integrity: sha512-sacXoX+xd8r4WKsy9MvH/q/vBtEHr86cpImXwyg74pFIpERKt6FmB8cXpeuh0ZLgclOlHI4Wcll7+R5L02xk9Q==}
     engines: {node: '>= 12'}
     peerDependencies:
       html-webpack-plugin: '>= 5.0.0-beta.1 < 6'
@@ -8627,6 +8630,8 @@ snapshots:
       possible-typed-array-names: 1.1.0
       reflect.getprototypeof: 1.0.10
 
+  typed-assert@1.0.9: {}
+
   typescript-eslint@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/eslint-plugin': 8.70.1(@typescript-eslint/parser@8.70.1(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@5.9.3))(eslint@10.11.0(supports-color@8.1.1))(supports-color@8.1.1)(typescript@5.9.3)
@@ -8783,8 +8788,9 @@ snapshots:
 
   webpack-sources@3.6.0: {}
 
-  webpack-subresource-integrity@5.2.0-rc.1(html-webpack-plugin@5.6.8(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0)))(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0)):
+  webpack-subresource-integrity@5.1.0(html-webpack-plugin@5.6.8(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0)))(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0)):
     dependencies:
+      typed-assert: 1.0.9
       webpack: 5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0)
     optionalDependencies:
       html-webpack-plugin: 5.6.8(webpack@5.111.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0))

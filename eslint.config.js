@@ -2,5 +2,5 @@ import defaults from '@langri-sha/eslint-config'
 
 export default [
   ...defaults,
-  { ignores: ['**/.*', '**/dist/', '!.projenrc.mts'] },
+  { ignores: ['**/.*', '**/dist/', '!.projenrc.ts'] },
 ]

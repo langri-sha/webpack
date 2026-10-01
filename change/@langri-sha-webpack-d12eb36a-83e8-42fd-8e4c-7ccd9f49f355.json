@@ -1,0 +1,7 @@
+{
+  "type": "minor",
+  "comment": "Declare the package as an ES module",
+  "packageName": "@langri-sha/webpack",
+  "email": "filip.dupanovic@gmail.com",
+  "dependentChangeType": "patch"
+}

@@ -210,8 +210,8 @@ importers:
         specifier: 0.31.2
         version: 0.31.2(@babel/core@8.0.6)(beachball@2.66.0(typescript@5.9.3))(eslint@10.11.0(supports-color@8.1.1))(husky@9.1.7)(lint-staged@17.6.0)(prettier@3.9.9)(projen@0.86.5(constructs@10.8.1))(supports-color@8.1.1)(tsx@4.23.15)(typescript@5.9.3)
       '@langri-sha/tsconfig':
-        specifier: 1.0.2
-        version: 1.0.2(typescript@5.9.3)
+        specifier: 1.1.0
+        version: 1.1.0(typescript@5.9.3)
       '@types/node':
         specifier: 24.19.0
         version: 24.19.0
@@ -1487,10 +1487,10 @@ packages:
     peerDependencies:
       projen: ^0.86.0
 
-  '@langri-sha/tsconfig@1.0.2':
-    resolution: {integrity: sha512-i2KVSIHb3O2McTR0JA62R5bhEmBQLEwL402RYW3qSs75u7sPDudRzPYEhJJgeF01gKHIxcaQkpYmLPnb9t444w==}
+  '@langri-sha/tsconfig@1.1.0':
+    resolution: {integrity: sha512-OgXlvCo51R2VB2BUVNVuxJoJzuzFgXXNk/xtZzUl8qgRULH3Vv3hOsUsqSjvdAVzIv7JAi8froLO1IYRqF0kMg==}
     peerDependencies:
-      typescript: ^5.5.0
+      typescript: ^5.5.0 || ^6.0.0 || ^7.0.0
 
   '@leichtgewicht/ip-codec@2.0.5':
     resolution: {integrity: sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==}
@@ -5698,7 +5698,7 @@ snapshots:
     dependencies:
       projen: 0.86.5(constructs@10.8.1)
 
-  '@langri-sha/tsconfig@1.0.2(typescript@5.9.3)':
+  '@langri-sha/tsconfig@1.1.0(typescript@5.9.3)':
     dependencies:
       typescript: 5.9.3
 

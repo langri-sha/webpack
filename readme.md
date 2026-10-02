@@ -14,18 +14,18 @@ Webpack for your builds in monorepos.
 Install the dependencies:
 
 ```sh
-npm install -D wepback webpack-cli
+npm install -D webpack @babel/register @langri-sha/webpack
 ```
 
 Then configure your Webpack configuration:
 
-```js
-// webpack.config.js
+```ts
+// webpack.config.ts
 import { type Configuration, resolve, resolveLoader } from '@langri-sha/webpack'
 
 export default {
   resolve,
-  resolveLoader
+  resolveLoader,
 } as Configuration
 ```
 

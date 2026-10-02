@@ -1,8 +1,18 @@
 # Change Log - @langri-sha/webpack
 
-<!-- This log was last generated on Thu, 01 Oct 2026 20:15:02 GMT and should not be manually modified. -->
+<!-- This log was last generated on Fri, 02 Oct 2026 20:05:39 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 0.8.1
+
+Fri, 02 Oct 2026 20:05:39 GMT
+
+### Patches
+
+- chore(deps): update dependency @langri-sha/tsconfig to v1.0.2
+- Fix the readme's install line and example (filip.dupanovic@gmail.com)
+- chore(deps): update dependency @langri-sha/tsconfig to v1.1.0
 
 ## 0.8.0
 

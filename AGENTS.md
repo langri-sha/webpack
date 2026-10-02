@@ -11,7 +11,7 @@ the repository root.
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Projen (`.projenrc.ts` → `pnpm projen`) | `package.json`, `.projen/`, `tsconfig*.json`, `pnpm-workspace.yaml`, `renovate.json5`, `beachball.config.cjs`, the ESLint, Prettier and lint-staged configs, `.husky/`, the ignore and attribute files, `CODEOWNERS`, `license` |
 | Beachball                               | `CHANGELOG.md`, `CHANGELOG.json` and the `version` field                                                                                                                                                                        |
-| You                                     | `src/**`, `readme.md`, `.github/workflows/`, this file                                                                                                                                                                          |
+| You                                     | `src/**`, `readme.md`, `scripts/`, `.github/workflows/`, this file                                                                                                                                                              |
 
 Synthesized files are read-only; change them in `.projenrc.ts`. Repository
 settings, branch protection and the Actions secrets are managed by

@@ -48,7 +48,7 @@
     "@langri-sha/lint-staged": "0.9.8",
     "@langri-sha/prettier": "0.4.9",
     "@langri-sha/projen-project": "0.31.2",
-    "@langri-sha/tsconfig": "1.0.2",
+    "@langri-sha/tsconfig": "1.1.0",
     "@types/node": "24.19.0",
     "beachball": "2.66.0",
     "eslint": "10.11.0",

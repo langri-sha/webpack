@@ -38,7 +38,7 @@ const project = new Project({
       '@langri-sha/prettier@0.4.10',
       '@langri-sha/projen-project@*',
       '@langri-sha/tsconfig@1.1.0',
-      '@types/node@24.19.0',
+      '@types/node@24.19.1',
       'webpack@5.111.1',
     ],
     peerDeps: ['@babel/register@^8.0.0', 'webpack@^5.0.0'],

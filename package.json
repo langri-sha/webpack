@@ -49,7 +49,7 @@
     "@langri-sha/prettier": "0.4.10",
     "@langri-sha/projen-project": "0.32.0",
     "@langri-sha/tsconfig": "1.1.0",
-    "@types/node": "24.19.0",
+    "@types/node": "24.19.1",
     "beachball": "2.66.0",
     "eslint": "10.11.0",
     "husky": "9.1.7",

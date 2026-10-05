@@ -13,7 +13,7 @@ jobs:
     # this the run fails at startup before any job is created.
     permissions:
       contents: write
-    uses: langri-sha/github/.github/workflows/check.yml@v0.23.0
+    uses: langri-sha/github/.github/workflows/check.yml@v0.24.0
     with:
       beachball: true
       eslint: true
@@ -32,5 +32,5 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: langri-sha/github/actions/pnpm@v0.23.0
+      - uses: langri-sha/github/actions/pnpm@v0.24.0
       - run: pnpm smoke

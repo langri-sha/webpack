@@ -1,7 +1,0 @@
-{
-  "type": "patch",
-  "comment": "chore(deps): update langri-sha projen toolchain",
-  "packageName": "@langri-sha/webpack",
-  "email": "email not defined",
-  "dependentChangeType": "patch"
-}

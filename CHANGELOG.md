@@ -1,8 +1,21 @@
 # Change Log - @langri-sha/webpack
 
-<!-- This log was last generated on Fri, 02 Oct 2026 20:05:39 GMT and should not be manually modified. -->
+<!-- This log was last generated on Wed, 07 Oct 2026 10:16:14 GMT and should not be manually modified. -->
 
 <!-- Start content -->
+
+## 0.8.2
+
+Wed, 07 Oct 2026 10:16:14 GMT
+
+### Patches
+
+- chore(deps): update dependency @types/node to v24.19.1
+- chore(deps): update langri-sha projen toolchain
+- fix(deps): update dependency pnpm to v12.9.0
+- fix(deps): update dependency pnpm to v12.9.1
+- fix(deps): update dependency pnpm to v12.8.2
+- chore(deps): update dependency @langri-sha/projen-project to v0.32.0
 
 ## 0.8.1
 

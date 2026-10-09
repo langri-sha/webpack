@@ -64,7 +64,7 @@
     "@babel/register": "^8.0.0",
     "webpack": "^5.0.0"
   },
-  "packageManager": "pnpm@12.10.0",
+  "packageManager": "pnpm@12.10.1",
   "devEngines": {
     "runtime": {
       "name": "node",

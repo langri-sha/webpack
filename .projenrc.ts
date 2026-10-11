@@ -149,6 +149,7 @@ const project = new Project({
       include: ['src'],
     },
   },
+  worktrunk: {},
 })
 
 project.package?.addField('packageManager', 'pnpm@12.10.1')

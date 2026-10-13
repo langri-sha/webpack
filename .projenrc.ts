@@ -34,7 +34,7 @@ const project = new Project({
     devDeps: [
       '@langri-sha/babel-preset@0.6.10',
       '@langri-sha/eslint-config@0.9.19',
-      '@langri-sha/lint-staged@0.9.10',
+      '@langri-sha/lint-staged@0.9.11',
       '@langri-sha/prettier@0.4.11',
       '@langri-sha/projen-project@*',
       '@langri-sha/tsconfig@1.1.1',

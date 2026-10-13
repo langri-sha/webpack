@@ -47,9 +47,9 @@
   "devDependencies": {
     "@langri-sha/babel-preset": "0.6.10",
     "@langri-sha/eslint-config": "0.9.19",
-    "@langri-sha/lint-staged": "0.9.10",
+    "@langri-sha/lint-staged": "0.9.11",
     "@langri-sha/prettier": "0.4.11",
-    "@langri-sha/projen-project": "0.37.0",
+    "@langri-sha/projen-project": "0.38.1",
     "@langri-sha/tsconfig": "1.1.1",
     "@types/node": "24.19.2",
     "beachball": "2.66.0",

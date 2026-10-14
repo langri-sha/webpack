@@ -46,8 +46,8 @@ notes; a tag that already has a release is skipped, so the workflow is safe to
 rerun. Beachball's own `gitTags` stays off, since it would name the tags
 `@langri-sha/webpack_v<version>`.
 
-`main` points at `src/` in the repository, and `publishConfig` swaps `main` and
-`types` for `dist/`, which `prepublishOnly` builds. The tarball ships `src/`
+`main` points at `src/` in the repository, and `publishConfig` points `main` and
+`types` at `dist/`, which `prepublishOnly` builds. The tarball ships `src/`
 beside `dist/`, which the declaration maps point into.
 
 There is deliberately no `engines` field. Published from the root, it would bind

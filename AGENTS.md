@@ -49,8 +49,7 @@ the workflow is safe to rerun.
 
 `main` points at `src/` in the repository, and `publishConfig` swaps `main` and
 `types` for `dist/`, which `prepublishOnly` builds. The tarball ships `src/`
-beside `dist/`, which the declaration maps point into, as every release from
-`langri-sha/projen` did.
+beside `dist/`, which the declaration maps point into.
 
 There is deliberately no `engines` field. Published from the root, it would bind
 consumers to the Node.js release this repository is developed on, so that lives
@@ -86,13 +85,3 @@ so don't let Renovate move it until that is fixed.
 `pnpm smoke` guards all of this: it packs the tarball, installs it into a
 temporary pnpm project, imports it in plain Node and builds with `babel-loader`.
 The Workspace workflow runs it as the `smoke` job.
-
-## Provenance
-
-Extracted from `langri-sha/projen` at `6417104d` on 2026-10-01 with
-`git filter-repo --subdirectory-filter packages/webpack`. All 180 commits that
-touched the package keep their trees, authorship, dates and messages. The
-history reaches back to 2020-10-24, when the package started in
-`langri-sha/langri-sha.com`, which handed it to projen on 2026-08-15. Issue and
-pull request numbers in those older messages refer to the two source
-repositories.

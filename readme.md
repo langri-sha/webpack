@@ -29,4 +29,10 @@ export default {
 } as Configuration
 ```
 
+## Contributing
+
+See [CONTRIBUTING.md] in `langri-sha/github`.
+
+[contributing.md]:
+  https://github.com/langri-sha/github/blob/main/CONTRIBUTING.md
 [webpack]: https://webpack.js.org/

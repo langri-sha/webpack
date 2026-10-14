@@ -83,10 +83,11 @@ export, since Node can't detect it as a named export of CommonJS `webpack`, and
 `dist/` to the `node_modules` the package is installed in, which is where pnpm
 puts its `babel-loader`.
 
-`webpack-subresource-integrity` is pinned to 5.1.0. The ESM build of 5.2.0-rc.1
+`webpack-subresource-integrity` stays at 5.1.0. The ESM build of 5.2.0-rc.1
 imports its own modules without file extensions
 ([waysact/webpack-subresource-integrity#236](https://github.com/waysact/webpack-subresource-integrity/issues/236)),
-so don't let Renovate move it until that is fixed.
+so this package would fail to load in plain Node with it. Move it only to a
+release that fixes that.
 
 `pnpm smoke` guards all of this: it packs the tarball, installs it into a
 temporary pnpm project, imports it in plain Node and builds with `babel-loader`.

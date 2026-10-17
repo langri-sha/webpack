@@ -7,4 +7,6 @@ tsconfig*.json
 /AGENTS.md
 /CODEOWNERS
 /change/
+/dagger.lock
+/dagger.toml
 /scripts/

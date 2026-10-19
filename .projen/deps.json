@@ -77,7 +77,7 @@
     },
     {
       "name": "webpack",
-      "version": "5.111.1",
+      "version": "5.112.0",
       "type": "build"
     },
     {

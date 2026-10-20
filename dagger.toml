@@ -19,10 +19,10 @@ packageManager = "pnpm"
 baseImageAddress = "node:24-slim"
 
 [modules.ci]
-source = "github.com/langri-sha/dagger/ci@v1.4.1"
+source = "github.com/langri-sha/dagger/ci@v1.7.0"
 
 [modules.typescript]
-source = "github.com/langri-sha/dagger/typescript@v1.4.1"
+source = "github.com/langri-sha/dagger/typescript@v1.7.0"
 
 [modules.beachball]
-source = "github.com/langri-sha/dagger/beachball@v1.4.1"
+source = "github.com/langri-sha/dagger/beachball@v1.7.0"

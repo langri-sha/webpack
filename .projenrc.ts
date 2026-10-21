@@ -28,7 +28,7 @@ const project = new Project({
       'html-webpack-plugin@5.6.8',
       'terser-webpack-plugin@5.6.1',
       'webpack-bundle-analyzer@5.4.0',
-      'webpack-dev-server@6.0.0',
+      'webpack-dev-server@6.1.0',
       'webpack-subresource-integrity@5.1.0',
     ],
     devDeps: [

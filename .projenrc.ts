@@ -14,7 +14,7 @@ const project = new Project({
     keywords: ['babel', 'monorepo', 'webpack'],
     license: 'MIT',
     licensed: true,
-    minNodeVersion: '24.16.0',
+    minNodeVersion: '24.22.1',
     peerDependencyOptions: {
       pinnedDevDependency: false,
     },

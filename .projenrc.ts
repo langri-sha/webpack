@@ -39,7 +39,7 @@ const project = new Project({
       '@langri-sha/projen-project@*',
       '@langri-sha/tsconfig@1.1.1',
       '@types/node@24.19.2',
-      'webpack@5.112.0',
+      'webpack@5.112.1',
     ],
     peerDeps: ['@babel/register@^8.0.0', 'webpack@^5.0.0'],
   },

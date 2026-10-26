@@ -60,7 +60,7 @@
     "projen": "0.104.1",
     "tsx": "4.23.15",
     "typescript": "5.9.3",
-    "webpack": "5.112.0"
+    "webpack": "5.112.1"
   },
   "peerDependencies": {
     "@babel/register": "^8.0.0",

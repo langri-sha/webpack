@@ -119,6 +119,7 @@ const project = new Project({
   },
   worktrunk: {},
   skills: {
+    ignore: false,
     skills: [
       {
         source: 'langri-sha/skills',

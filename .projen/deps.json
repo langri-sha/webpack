@@ -1,11 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@langri-sha/babel-preset",
-      "version": "0.6.10",
-      "type": "build"
-    },
-    {
       "name": "@langri-sha/eslint-config",
       "version": "0.10.0",
       "type": "build"

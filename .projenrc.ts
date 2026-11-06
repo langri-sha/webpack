@@ -33,7 +33,7 @@ const project = new Project({
     ],
     devDeps: [
       '@langri-sha/projen-project@*',
-      '@langri-sha/tsconfig@2.0.0',
+      '@langri-sha/tsconfig@3.0.0',
       '@types/node@24.19.2',
       'webpack@5.112.2',
     ],

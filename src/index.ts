@@ -1,6 +1,7 @@
 import path from 'node:path'
 
-import webpack, { type Configuration, type ResolveOptions } from 'webpack'
+import type { Configuration, ResolveOptions } from 'webpack'
+import webpack from 'webpack'
 
 // Stock.
 export { default } from 'webpack'

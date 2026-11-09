@@ -185,8 +185,8 @@ importers:
         specifier: 5.6.1
         version: 5.6.1(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0)(webpack@5.112.2(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0))
       webpack-bundle-analyzer:
-        specifier: 5.4.1
-        version: 5.4.1
+        specifier: 5.4.2
+        version: 5.4.2
       webpack-dev-server:
         specifier: 6.1.0
         version: 6.1.0(supports-color@8.1.1)(webpack@5.112.2(clean-css@5.3.3)(esbuild@0.28.2)(html-minifier-terser@6.1.0))
@@ -4332,8 +4332,8 @@ packages:
     resolution: {integrity: sha512-s3NZy0QpTY9qGqzc0wtz4qI28z3+5qKbbAec4MV4G9N3CfgZ9wgvQRr0cl2jh/tqkWG1NWHkmVMHZpCamev5Wg==}
     engines: {node: '>=10.13.0'}
 
-  webpack-bundle-analyzer@5.4.1:
-    resolution: {integrity: sha512-iapXbcmT36pf1Mm2cttxOQXvVh400kpysh6IO17zNoyLX0+rwsvz/N1c3wEwjCOjLxGO42U/z4o6R9rZg4wIug==}
+  webpack-bundle-analyzer@5.4.2:
+    resolution: {integrity: sha512-STw41VwPFXH2SDo/S9E3V1MRNOwusR0OOnqvrO1RYoaFRq01hZaSPsHzn1LuJ0nXnyHVQoe2ELMcJKmUyXPdbg==}
     engines: {node: '>= 20.9.0'}
     hasBin: true
 
@@ -9054,7 +9054,7 @@ snapshots:
     dependencies:
       graceful-fs: 4.2.11
 
-  webpack-bundle-analyzer@5.4.1:
+  webpack-bundle-analyzer@5.4.2:
     dependencies:
       '@discoveryjs/json-ext': 0.6.3
       acorn: 8.19.0
